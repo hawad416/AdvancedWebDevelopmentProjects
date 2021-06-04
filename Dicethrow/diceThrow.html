@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dice Roll</title>
+</head>
+
+<body>
+    
+    
+<img src="images/d1.gif" class="mydice1">
+<img src="images/d1.gif" class="mydice2">
+
+<!-- Update this so the event is in the Javascript code using an add event handler -->
+<input type="button" value="Throw dice!">
+<script>
+
+
+//create the array
+var diceFace=["images/d1.gif", "images/d2.gif", "images/d3.gif", "images/d4.gif", "images/d5.gif", "images/d6.gif",]
+var imageName=document.querySelector(".mydice1");
+var imageName2=document.querySelector(".mydice2");
+
+
+var btn=document.querySelector("input");
+
+btn.addEventListener("click", throwdice);
+
+
+
+function throwdice(){
+	
+//create a random integer between 0 and 5
+var randomdice=Math.floor(Math.random()*6);
+var randomdice2=Math.floor(Math.random()*6);
+
+//There are a few ways to reference the images. Use the one you think works best
+imageName.src=diceFace[randomdice];
+imageName2.src=diceFace[randomdice2];
+
+
+
+	if(randomdice==11){
+	console.log("You Win");
+	}
+	
+	if(randomdice==7 ) {
+	console.log("You Win")
+	}
+	
+	if (randomdice==2){
+	console.log("You Lose");
+
+    
+}}
+
+</script>
+</body>
+    
+</html>
