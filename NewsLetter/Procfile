@@ -1,0 +1,3 @@
+//heroku needs this file 
+
+web: node app.js
